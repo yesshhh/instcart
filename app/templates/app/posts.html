@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Posts of the User</h1>
+ {% for post in post_list %}
+       <li>{{ post.caption }}</li>
+       <ol>
+        {% for comment in comment_list %}
+            {% if post == comment.post %}
+                <li>{{ comment.text }}</li>
+            {% endif %}
+           {% endfor %}
+       </ol>
+   {% endfor %}
+<button><a href={% url 'app:home' %}>Home page</a></button>
+</body>
+</html>

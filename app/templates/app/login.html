@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login page</title>
+</head>
+<body>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+    <button class="btn btn-primary" type="submit" name="login"><a href="{% url 'app:posts' %}">Login</a></button>
+    <button class="btn btn-secondary" type="submit" name="return"><a href={% url 'app:home' %}>Home page</a></button>
+</form>
+</body>
+</html>

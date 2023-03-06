@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Profile</title>
+</head>
+<body>
+<form method="POST">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Register</button>
+    <button><a href={% url 'app:home' %}>Home page</a></button>
+    <button><a href="{% url 'app:login' %}">Login</a></button>
+</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instagram by Team3</title>
+</head>
+<body>
+   <h1>Instagram by Team3</h1>
+   <h2>New User, Create a profile</h2>
+   <button><a href={% url 'app:addprofile' %}>Add Profile</a></button>
+   <h2>Existing User, Login</h2>
+   <button><a href="{% url 'app:login' %}">Login</a></button>
+</body>
+</html>
